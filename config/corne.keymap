@@ -32,7 +32,7 @@
 
         Num {
             bindings = <
-&kp ESC    &none       &none           &kp UP_ARROW     &kp F4           &none    &bl BL_TOG    &none     &none         &none  &mt A B          &kp RET
+&kp ESC    &none       &none           &kp UP_ARROW     &kp F4           &none    &bl BL_TOG    &none     &none         &none  &none            &kp RET
 &kp TAB    &trans      &kp LEFT_ARROW  &kp DOWN         &kp RIGHT        &to 5    &bl BL_CYCLE  &none     &none         &none  &rgb_ug RGB_TOG  &kp DEL
 &kp LSHFT  &bl BL_TOG  &bl BL_CYCLE    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &mo 4    &none         &none     &none         &none  &rgb_ug RGB_EFF  &kp LESS_THAN
                                        &kp LCTRL        &kp SPACE        &none    &to 3         &kp BSPC  &kp LEFT_ALT
