@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -32,10 +31,10 @@
 
         Num {
             bindings = <
-&kp ESC    &none       &none           &kp UP_ARROW     &kp F4           &none    &bl BL_TOG    &none     &none         &none  &none            &kp RET
-&kp TAB    &trans      &kp LEFT_ARROW  &kp DOWN         &kp RIGHT        &to 5    &bl BL_CYCLE  &none     &none         &none  &rgb_ug RGB_TOG  &kp DEL
-&kp LSHFT  &bl BL_TOG  &bl BL_CYCLE    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &mo 4    &none         &none     &none         &none  &rgb_ug RGB_EFF  &kp LESS_THAN
-                                       &kp LCTRL        &kp SPACE        &none    &to 3         &kp BSPC  &kp LEFT_ALT
+&kp ESC    &none   &none           &kp UP_ARROW  &kp F4     &none    &bl BL_TOG    &none     &none         &none  &none            &kp RET
+&kp TAB    &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &to 5    &bl BL_CYCLE  &none     &none         &none  &rgb_ug RGB_TOG  &kp DEL
+&kp LSHFT  &none   &none           &none         &none      &mo 4    &none         &none     &none         &none  &rgb_ug RGB_EFF  &kp LESS_THAN
+                                   &kp LCTRL     &kp SPACE  &none    &to 3         &kp BSPC  &kp LEFT_ALT
             >;
         };
 
@@ -59,19 +58,19 @@
 
         Control {
             bindings = <
-&kp ESC    &trans      &trans      &trans          &trans       &trans               &trans  &trans    &trans    &trans  &trans  &kp RET
-&kp TAB    &trans      &trans      &trans          &trans       &trans               &trans  &trans    &trans    &trans  &trans  &kp DEL
-&kp LSHFT  &bt BT_PRV  &bt BT_NXT  &bt BT_CLR_ALL  &bootloader  &ext_power EP_TOG    &trans  &trans    &trans    &trans  &trans  &kp LT
-                                   &kp LCTRL       &kp SPACE    &to 0                &trans  &kp BSPC  &kp LGUI
+&kp ESC    &trans      &trans      &trans     &trans       &trans    &trans  &trans    &trans        &trans  &trans  &kp RET
+&kp TAB    &trans      &trans      &trans     &trans       &trans    &trans  &trans    &trans        &trans  &trans  &kp DEL
+&kp LSHFT  &bt BT_PRV  &bt BT_NXT  &none      &bootloader  &none     &trans  &trans    &trans        &trans  &trans  &kp LT
+                                   &kp LCTRL  &kp SPACE    &to 0     &trans  &kp BSPC  &kp LEFT_ALT
             >;
         };
 
         FUN {
             bindings = <
-&kp ESC    &trans     &trans  &trans     &trans     &trans    &trans  &trans    &trans    &trans  &kp K   &kp RET
-&kp TAB    &trans     &trans  &trans     &trans     &trans    &trans  &trans    &trans    &trans  &trans  &kp DEL
-&kp LSHFT  &kp LSHFT  &trans  &trans     &trans     &trans    &trans  &trans    &trans    &trans  &trans  &kp LS(SEMI)
-                              &kp LCTRL  &kp SPACE  &to 0     &trans  &kp BSPC  &kp LGUI
+&kp ESC    &trans  &trans  &trans     &trans     &trans    &trans  &trans    &trans        &trans  &none   &kp RET
+&kp TAB    &trans  &trans  &trans     &trans     &trans    &trans  &trans    &trans        &trans  &trans  &kp DEL
+&kp LSHFT  &none   &trans  &trans     &trans     &trans    &trans  &trans    &trans        &trans  &trans  &kp LS(LWIN)
+                           &kp LCTRL  &kp SPACE  &to 0     &trans  &kp BSPC  &kp LEFT_ALT
             >;
         };
     };
